@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+# -*- coding: utf-8 -*- 
+
 """
 使用指南：
 默认每日热量缺口 400kcal
@@ -66,7 +68,7 @@ def get_daily_meal_plan(weight, height, age, is_female=True, activity_level=2, c
     protein = get_protein(weight, activity_level)
     carb = get_carb(high_carb_day, weight)
     fat = get_fat(total_cal, protein, carb)
-    print "  carb: %dg, protein: %dg, fat: %dg" % (carb, protein, fat)
+    print "  carb: %dg, protein: %dg, fat: %dg, total %d kcal" % (carb, protein, fat, total_cal)
 
 def main():
     parsed_args = get_parser()
